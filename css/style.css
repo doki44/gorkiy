@@ -184,7 +184,7 @@ ul {
 }
 
 .about {
-  padding: 115px 0 100px;
+  padding: 115px 0 50px;
 }
 .about__flex {
   display: flex;
@@ -259,7 +259,7 @@ ul {
 }
 
 .news {
-  padding: 100px 0;
+  padding: 50px 0;
   background: #F7F7F7;
 }
 .news__title {
@@ -293,7 +293,7 @@ ul {
 }
 
 .card {
-  padding: 100px 0;
+  padding: 50px 0 80px;
 }
 .card__items {
   display: flex;
@@ -406,11 +406,20 @@ ul {
   opacity: 1;
   visibility: visible;
 }
-.popup__inner {
+.popup__inner-form {
   max-width: 500px;
   background: #fff;
   position: relative;
   padding: 40px 100px;
+}
+.popup__inner-gos {
+  max-width: 585px;
+  text-align: center;
+  background: #fff;
+  padding-bottom: 40px;
+}
+.popup__inner-gos img {
+  width: 100%;
 }
 .popup__close {
   width: 20px;

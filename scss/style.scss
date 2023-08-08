@@ -162,7 +162,7 @@ ul{
 }
 
 .about{
-    padding: 115px 0 100px;
+    padding: 115px 0 50px;
     &__flex{
         display: flex;
         justify-content: space-between;
@@ -242,7 +242,7 @@ ul{
 }
 
 .news{
-    padding: 100px 0;
+    padding: 50px 0;
     background: #F7F7F7;
     &__inner{
 
@@ -279,7 +279,7 @@ ul{
 }
 
 .card{
-    padding: 100px 0;
+    padding: 50px 0 80px;
     &__items{
         display: flex;
         justify-content: space-between;
@@ -394,14 +394,21 @@ ul{
         visibility: visible;
     }
 
-    &__inner {
+    &__inner-form{
         max-width: 500px;
-        // height: 518px;
         background: #fff;
         position: relative;
         padding: 40px 100px;
     }
-
+    &__inner-gos{
+        max-width: 585px;
+        text-align: center;
+        background: #fff;
+        padding-bottom: 40px;
+        img{
+            width: 100%;
+        }
+    }
     &__close {
         width: 20px;
         height: 20px;
