@@ -1,0 +1,508 @@
+@font-face {
+  font-family: "Century Gothic Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/centurygothic.woff") format("woff"), url("../fonts/centurygothic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Century Gothic Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/centurygothic_bold.woff") format("woff"), url("../fonts/centurygothic_bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ysabeau SC Semi-Bold";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/YsabeauSC-SemiBold.woff") format("woff"), url("../fonts/YsabeauSC-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ysabeau SC Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/YsabeauSC-Bold.woff") format("woff"), url("../fonts/YsabeauSC-Bold.woff2") format("woff2");
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic Regular";
+  font-size: 20px;
+  color: #000;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.lock {
+  overflow-y: hidden;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  font-family: "Century Gothic Bold";
+  background: var(--green, #40BCCD);
+  border: 2px solid transparent;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  max-height: 65px;
+  transition: all 0.3s;
+}
+
+.header {
+  padding: 40px 0 50px;
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.header__top-nav {
+  margin-right: 40px;
+}
+.header__top-li {
+  display: inline-block;
+  margin-right: 20px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+.header__top-li:last-child {
+  margin-right: 0;
+}
+.header__logo {
+  margin-right: auto;
+}
+.header__bottom {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+.header__menu {
+  font-size: 21px;
+  font-family: "Century Gothic Bold";
+  margin-right: auto;
+}
+.header__menu-li {
+  display: inline-block;
+  padding: 15px 23px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+.header__settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__settings button {
+  font-size: 24px;
+  display: flex;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-right: 7px;
+}
+.header__settings button:last-child {
+  margin-right: 0;
+}
+
+.top {
+  position: relative;
+}
+.top__slider .slick-arrow {
+  position: absolute;
+  bottom: 70px;
+  z-index: 5;
+  right: 0;
+  font-size: 0;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  cursor: pointer;
+}
+.top__slider .slick-next {
+  margin-right: 60px;
+  background-image: url(../images/arrow-next.svg);
+}
+.top__slider .slick-prev {
+  margin-right: 180px;
+  background-image: url(../images/arrow-prev.svg);
+}
+.top__inner {
+  position: absolute;
+  bottom: 117px;
+  color: #fff;
+}
+.top__title {
+  font-family: "Century Gothic Bold";
+  font-size: 90px;
+  margin-bottom: 25px;
+}
+.top__place {
+  font-size: 55px;
+  margin-bottom: 45px;
+  padding-left: 102px;
+}
+.top__place::before {
+  position: absolute;
+  content: "";
+  width: 82px;
+  height: 82px;
+  background-image: url(../images/place.svg);
+  background-repeat: no-repeat;
+  left: 0;
+}
+
+.about {
+  padding: 115px 0 100px;
+}
+.about__flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.about__flex-filials {
+  margin-right: 60px;
+}
+.about__flex-descr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px 20px;
+}
+.about__flex-item {
+  max-width: 520px;
+  box-shadow: 0px 0px 25px 0px transparent;
+  transition: all 0.3s;
+}
+.about__flex-img {
+  margin-bottom: 20px;
+}
+.about__flex-p {
+  padding: 0 15px 15px;
+}
+.about__flex-title {
+  font-family: "Ysabeau SC Semi-Bold";
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.about__flex-place {
+  margin-bottom: 10px;
+}
+.about__flex-text {
+  margin-bottom: 10px;
+}
+.about__flex-btn {
+  color: #40BCCD;
+}
+.about__title {
+  font-family: "Ysabeau SC Bold";
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.about__filials {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.about__filials-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #40BCCD;
+}
+.about__all {
+  margin-bottom: 30px;
+}
+.about__all-link {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.about__inline {
+  margin-bottom: 100px;
+}
+.about__inline-item .years {
+  font-size: 128px;
+}
+.about__inline-item .chislo {
+  font-size: 64px;
+}
+.about__inline-item span {
+  color: #40BCCD;
+}
+
+.news {
+  padding: 100px 0;
+  background: #F7F7F7;
+}
+.news__title {
+  font-family: "Ysabeau SC Bold";
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+.news__list {
+  display: flex;
+  justify-content: space-between;
+}
+.news__list-item {
+  max-width: 340px;
+  margin-right: 20px;
+}
+.news__list-item:last-child {
+  margin-right: 0;
+}
+.news__list-title {
+  font-family: "Ysabeau SC Semi-Bold";
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #40BCCD;
+}
+.news__list-descr {
+  margin-bottom: 20px;
+}
+.news__list-btn {
+  color: #40BCCD;
+}
+
+.card {
+  padding: 100px 0;
+}
+.card__items {
+  display: flex;
+  justify-content: space-between;
+}
+.card__item {
+  width: 50%;
+}
+.card__item._images {
+  position: relative;
+  text-align: right;
+}
+.card__blue {
+  position: absolute;
+  left: 0;
+  top: 136px;
+}
+.card__title {
+  font-family: "Ysabeau SC Bold";
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.card__title span {
+  color: #40BCCD;
+}
+.card__descr {
+  margin-bottom: 40px;
+}
+.card__btns .btn:first-child {
+  margin-right: 20px;
+}
+.card__partners {
+  padding-top: 150px;
+}
+
+.feedback {
+  background: var(--green, #40BCCD);
+  padding: 50px 0;
+}
+.feedback__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback__title {
+  color: #fff;
+  font-family: "Ysabeau SC Bold";
+  font-size: 36px;
+}
+.feedback__btn {
+  background: #fff;
+  color: #000;
+  font-family: "Century Gothic Bold";
+  padding: 20px 40px;
+}
+
+.footer {
+  padding: 150px 0 70px;
+  background: #262626;
+  color: #fff;
+}
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #fff;
+}
+.footer__menu-item {
+  max-width: 270px;
+  margin-right: 10px;
+}
+.footer__menu-item:last-child {
+  margin-right: 0;
+}
+.footer__menu-li {
+  margin-bottom: 10px;
+}
+.footer__menu-li:last-child {
+  margin-bottom: 0;
+}
+.footer__copy {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copy-text a {
+  color: var(--green, #40BCCD);
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(54, 54, 54, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.8s ease 0s;
+  z-index: 10;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__inner {
+  max-width: 500px;
+  background: #fff;
+  position: relative;
+  padding: 40px 100px;
+}
+.popup__close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  cursor: pointer;
+}
+.popup__close::after, .popup__close::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #69766D;
+  top: 9px;
+  right: -2px;
+}
+.popup__close::after {
+  transform: rotate(45deg);
+}
+.popup__close::before {
+  transform: rotate(-45deg);
+}
+.popup__body {
+  text-align: center;
+  font-size: 12px;
+}
+.popup__title {
+  font-family: "Ysabeau SC Bold";
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.popup__text {
+  margin-bottom: 20px;
+}
+.popup__form {
+  margin-bottom: 35px;
+}
+.popup__form-input {
+  display: block;
+  width: 100%;
+  border: 1px solid #40BCCD;
+  outline: none;
+  padding: 8px 10px;
+  font-family: "Century Gothic Regular";
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.popup__form-input[placholder] {
+  font-family: inherit;
+  color: #000;
+  font-size: 12px;
+}
+.popup__form-textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  padding: 8px 10px;
+  border: 1px solid #40BCCD;
+  outline: none;
+  font-family: "Century Gothic Regular";
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 20px;
+}
+.popup__form-textarea[placeholder] {
+  font-family: inherit;
+  font-size: 12px;
+  color: #000;
+}
+.popup__form-btn {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  background: #40BCCD;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.popup__privacy {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.popup__privacy-input {
+  margin-right: 10px;
+}
+.popup__privacy-text {
+  text-align: left;
+}
