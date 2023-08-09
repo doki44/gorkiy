@@ -354,6 +354,7 @@ ul {
   padding: 150px 0 70px;
   background: #262626;
   color: #fff;
+  position: relative;
 }
 .footer__menu {
   display: flex;
@@ -411,15 +412,6 @@ ul {
   background: #fff;
   position: relative;
   padding: 40px 100px;
-}
-.popup__inner-gos {
-  max-width: 585px;
-  text-align: center;
-  background: #fff;
-  padding-bottom: 40px;
-}
-.popup__inner-gos img {
-  width: 100%;
 }
 .popup__close {
   width: 20px;
@@ -514,4 +506,73 @@ ul {
 }
 .popup__privacy-text {
   text-align: left;
+}
+
+.scroll__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+.scroll__item._active {
+  visibility: visible;
+}
+.scroll__item-inner {
+  max-width: 585px;
+  text-align: center;
+  background-color: #fff;
+  padding-bottom: 40px;
+  color: #000;
+}
+.scroll__item-inner img {
+  width: 100%;
+}
+.scroll__item-close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  cursor: pointer;
+}
+.scroll__item-close::after, .scroll__item-close::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #69766D;
+  top: 9px;
+  right: -2px;
+}
+.scroll__item-close::after {
+  transform: rotate(45deg);
+}
+.scroll__item-close::before {
+  transform: rotate(-45deg);
+}
+.scroll__item-title {
+  font-family: "Ysabeau SC Bold";
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.scroll__item-text {
+  margin-bottom: 20px;
+}
+
+._anim-show {
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+  opacity: 1;
+  transform: translate(0, 0);
 }

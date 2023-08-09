@@ -102,3 +102,57 @@ document.addEventListener('keydown', function (e) {
         popupClose(popupActive);
     }
 });
+
+//Анимация
+
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0){
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll(params) {
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 3;
+            const scrollItem = document.querySelector('.scroll__item');
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+            if(animItemHeight > window.innerHeight){
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
+                animItem.classList.add('_active');
+                scrollItem.classList.add('_active');
+            }
+            if(scrollItem.classList.contains('_active')){
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.which === 27) {
+                        document.querySelector('.scroll__item._active');
+                        scrollItem.classList.remove('_active');
+                    }
+                });
+
+                scrollItemCloseIcon = document.addEventListener('click', function (e) {
+                    document.querySelector('.scroll__item._active');
+                    animItem.classList.remove('_active');                
+                });
+            }
+            else{
+                if (!scrollItem.classList.contains('_anim-no-hide')){
+                    scrollItem.classList.remove('_active');
+                }
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+    animOnScroll();
+};
