@@ -1,3 +1,12 @@
+// Календарь
+
+$('.header__calendar-link').on('mouseover', function(){
+    $('.header__calendar').addClass('_active');
+});
+
+$('.header__calendar-link').on('mouseleave', function(){
+    $('.header__calendar').removeClass('_active');
+});
 // Слайдер
 
 $('.top__slider').slick({

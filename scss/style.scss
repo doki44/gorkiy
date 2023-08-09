@@ -72,6 +72,21 @@ ul{
             margin-right: 0;
         }
     }
+    &__calendar-link{
+        position: relative;
+    }
+    &__calendar{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transition: all .3s;
+        z-index: 3;
+        padding-top: 15px;
+    }
+    &__calendar._active{
+        opacity: 1;
+        visibility: visible;
+    }
     &__logo{
         margin-right: auto;
     }

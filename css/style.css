@@ -95,6 +95,21 @@ ul {
 .header__top-li:last-child {
   margin-right: 0;
 }
+.header__calendar-link {
+  position: relative;
+}
+.header__calendar {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.3s;
+  z-index: 3;
+  padding-top: 15px;
+}
+.header__calendar._active {
+  opacity: 1;
+  visibility: visible;
+}
 .header__logo {
   margin-right: auto;
 }
