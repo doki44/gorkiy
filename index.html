@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Музей Горького</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
@@ -31,7 +33,28 @@
                             <li class="header__top-li header__calendar-link">
                                 <a href="#" class="header__top-link">Календарь событий</a>
                                 <div class="header__calendar">
-                                    <img src="images/Calendar.png" alt="">
+                                    
+                                    <header class="header__calendar-header">
+                                        <p class="current-date"></p>
+                                        <div class="icons">
+                                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                        </div>
+                                    </header>
+                                    
+                                    <div class="calendar">
+                                        <ul class="weeks">
+                                            <li>Пн</li>
+                                            <li>Вт</li>
+                                            <li>Ср</li>
+                                            <li>Чт</li>
+                                            <li>Пт</li>
+                                            <li>Сб</li>
+                                            <li>Вс</li>
+                                        </ul>
+                                        <ul class="days"></ul>
+                                    </div>
+
                                 </div>
                             </li>
                             <li class="header__top-li">

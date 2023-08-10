@@ -2,19 +2,19 @@
 
 *,
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
 
-html{
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Century Gothic Regular';
     font-size: 20px;
     color: #000;
@@ -22,26 +22,26 @@ body{
     overflow-x: hidden;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.lock{
+.lock {
     overflow-y: hidden;
 }
 
-.container{
+.container {
     max-width: 1450px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.btn{
+.btn {
     display: inline-block;
     color: #fff;
     font-family: 'Century Gothic Bold';
@@ -53,53 +53,155 @@ ul{
     transition: all .3s;
 }
 
-.header{
+.header {
     padding: 40px 0 50px;
-    &__top{
+
+    &__top {
         display: flex;
         align-items: center;
         margin-bottom: 25px;
-        &-nav{
+
+        &-nav {
             margin-right: 40px;
         }
-        &-li{
+
+        &-li {
             display: inline-block;
             margin-right: 20px;
             border-bottom: 2px solid transparent;
             transition: all .3s;
         }
-        &-li:last-child{
+
+        &-li:last-child {
             margin-right: 0;
         }
     }
-    &__calendar-link{
+
+    &__calendar-link {
         position: relative;
     }
-    &__calendar{
+
+    &__calendar {
         opacity: 0;
         visibility: hidden;
         position: absolute;
+        top: 30px;
         transition: all .3s;
         z-index: 3;
-        padding-top: 15px;
+        background-color: #fff;
+        width: 500px;
+        border-radius: 16px;
+        border: 1px solid var(--green, #40BCCD);
     }
-    &__calendar._active{
+
+    &__calendar._active {
         opacity: 1;
         visibility: visible;
     }
-    &__logo{
+
+    // Стили тела календаря
+
+    &__calendar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 30px 10px;
+        font-family: 'Ysabeau SC Bold';
+    }
+
+    &__calendar-header .icons span {
+        height: 38px;
+        width: 38px;
+        margin: 0 1px;
+        text-align: center;
+        line-height: 38px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__calendar-header .icons span:hover{
+        color: #40BCCD;
+    }
+
+    &__calendar-header .icons span:last-child {
+        margin-right: -10px;
+    }
+
+    .calendar {
+        padding: 20px;
+    }
+
+    .calendar ul {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .calendar .days {
+        margin-bottom: 20px;
+    }
+
+    .calendar .weeks li {
+        font-weight: 500;
+    }
+
+    .calendar ul li {
+        position: relative;
+        width: calc(100% / 7);
+    }
+
+    .calendar .days li {
+        z-index: 1;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    .days li.inactive {
+        color: #aaa;
+    }
+
+    .days li.active {
+        color: #fff;
+    }
+
+    .calendar .days li::before {
+        position: absolute;
+        content: '';
+        height: 40px;
+        width: 40px;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+    }
+
+    // .days li:hover::before {
+    //     background-color: #f2f2f2;
+    // }
+
+    .days li.active::before {
+        background: var(--green, #40BCCD);
+    }
+
+    // Конец стилей календаря
+
+    &__logo {
         margin-right: auto;
     }
-    &__bottom{
+
+    &__bottom {
         display: flex;
         align-items: center;
         font-size: 24px;
     }
-    &__menu{
+
+    &__menu {
         font-size: 21px;
         font-family: 'Century Gothic Bold';
         margin-right: auto;
-        &-li{
+
+        &-li {
             display: inline-block;
             padding: 15px 23px;
             border: 2px solid transparent;
@@ -107,27 +209,31 @@ ul{
             text-transform: uppercase;
         }
     }
-    &__settings{
+
+    &__settings {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    &__settings button{
+
+    &__settings button {
         font-size: 24px;
         display: flex;
         cursor: pointer;
         background-color: transparent;
         border: none;
         margin-right: 7px;
-        &:last-child{
+
+        &:last-child {
             margin-right: 0;
         }
     }
 }
 
-.top{
+.top {
     position: relative;
-    &__slider .slick-arrow{
+
+    &__slider .slick-arrow {
         position: absolute;
         bottom: 70px;
         z-index: 5;
@@ -142,29 +248,35 @@ ul{
         background-position: bottom;
         cursor: pointer;
     }
-    &__slider .slick-next{
+
+    &__slider .slick-next {
         margin-right: 60px;
         background-image: url(../images/arrow-next.svg);
     }
-    &__slider .slick-prev{
+
+    &__slider .slick-prev {
         margin-right: 180px;
         background-image: url(../images/arrow-prev.svg);
     }
-    &__inner{
+
+    &__inner {
         position: absolute;
         bottom: 117px;
         color: #fff;
     }
-    &__title{
+
+    &__title {
         font-family: 'Century Gothic Bold';
         font-size: 90px;
         margin-bottom: 25px;
     }
-    &__place{
+
+    &__place {
         font-size: 55px;
         margin-bottom: 45px;
         padding-left: 102px;
-        &::before{
+
+        &::before {
             position: absolute;
             content: '';
             width: 82px;
@@ -176,174 +288,211 @@ ul{
     }
 }
 
-.about{
+.about {
     padding: 115px 0 50px;
-    &__flex{
+
+    &__flex {
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
-        &-filials{
+
+        &-filials {
             margin-right: 60px;
         }
-        &-descr{
+
+        &-descr {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 100px 20px;
         }
-        &-item{
+
+        &-item {
             max-width: 520px;
             box-shadow: 0px 0px 25px 0px transparent;
             transition: all .3s;
         }
-        &-img{
+
+        &-img {
             margin-bottom: 20px;
         }
-        &-p{
+
+        &-p {
             padding: 0 15px 15px;
         }
-        &-title{
+
+        &-title {
             font-family: 'Ysabeau SC Semi-Bold';
             font-size: 24px;
             margin-bottom: 10px;
         }
-        &-place{
+
+        &-place {
             margin-bottom: 10px;
         }
-        &-text{
+
+        &-text {
             margin-bottom: 10px;
         }
-        &-btn{
+
+        &-btn {
             color: #40BCCD;
         }
     }
-    &__title{
+
+    &__title {
         font-family: 'Ysabeau SC Bold';
         font-size: 36px;
         margin-bottom: 40px;
     }
-    &__filials{
+
+    &__filials {
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
-        &-item{
+
+        &-item {
             padding: 20px 0;
             border-bottom: 1px solid #40BCCD;
         }
     }
-    &__all{
+
+    &__all {
         margin-bottom: 30px;
-        &-link{
+
+        &-link {
             padding-bottom: 10px;
             border-bottom: 1px solid #000;
         }
     }
+
     // &__soc{
     //     &-link{}
     // }
-    &__inline{
+    &__inline {
         margin-bottom: 100px;
-        &-item{
-            .years{
+
+        &-item {
+            .years {
                 font-size: 128px;
             }
-            .chislo{
+
+            .chislo {
                 font-size: 64px;
             }
-            span{
+
+            span {
                 color: #40BCCD;
             }
         }
     }
 }
 
-.news{
+.news {
     padding: 50px 0;
     background: #F7F7F7;
-    &__inner{
 
-    }
-    &__title{
+    &__inner {}
+
+    &__title {
         font-family: 'Ysabeau SC Bold';
         margin-bottom: 40px;
         font-size: 36px;
     }
-    &__list{
+
+    &__list {
         display: flex;
         justify-content: space-between;
-        &-item{
+
+        &-item {
             max-width: 340px;
             margin-right: 20px;
         }
-        &-item:last-child{
+
+        &-item:last-child {
             margin-right: 0;
         }
-        &-title{
+
+        &-title {
             font-family: 'Ysabeau SC Semi-Bold';
             font-size: 24px;
             margin-bottom: 10px;
             padding-bottom: 10px;
             border-bottom: 2px solid #40BCCD;
         }
-        &-descr{
+
+        &-descr {
             margin-bottom: 20px;
         }
-        &-btn{
+
+        &-btn {
             color: #40BCCD;
         }
     }
 }
 
-.card{
+.card {
     padding: 50px 0 80px;
-    &__items{
+
+    &__items {
         display: flex;
         justify-content: space-between;
     }
-    &__item{
+
+    &__item {
         width: 50%;
     }
-    &__item._images{
+
+    &__item._images {
         position: relative;
         text-align: right;
     }
-    &__blue{
+
+    &__blue {
         position: absolute;
         left: 0;
         top: 136px;
     }
-    &__title{
+
+    &__title {
         font-family: 'Ysabeau SC Bold';
         font-size: 36px;
         margin-bottom: 40px;
-        span{
+
+        span {
             color: #40BCCD;
         }
     }
-    &__descr{
+
+    &__descr {
         margin-bottom: 40px;
     }
-    &__btns .btn:first-child{
+
+    &__btns .btn:first-child {
         margin-right: 20px;
     }
-    &__partners{
+
+    &__partners {
         padding-top: 150px;
     }
 }
 
-.feedback{
+.feedback {
     background: var(--green, #40BCCD);
     padding: 50px 0;
-    &__inner{
+
+    &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    &__title{
+
+    &__title {
         color: #fff;
         font-family: 'Ysabeau SC Bold';
         font-size: 36px;
     }
-    &__btn{
+
+    &__btn {
         background: #fff;
         color: #000;
         font-family: 'Century Gothic Bold';
@@ -351,37 +500,46 @@ ul{
     }
 }
 
-.footer{
+.footer {
     padding: 150px 0 70px;
     background: #262626;
     color: #fff;
     position: relative;
-    &__inner{}
-    &__menu{
+
+    &__inner {}
+
+    &__menu {
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid #fff;
-        &-item{
+
+        &-item {
             max-width: 270px;
             margin-right: 10px;
         }
-        &-item:last-child{
+
+        &-item:last-child {
             margin-right: 0;
         }
-        &-list{}
-        &-li{
+
+        &-list {}
+
+        &-li {
             margin-bottom: 10px;
         }
-        &-li:last-child{
+
+        &-li:last-child {
             margin-bottom: 0;
         }
     }
-    &__copy{
+
+    &__copy {
         display: flex;
         justify-content: space-between;
-        &-text a{
+
+        &-text a {
             color: var(--green, #40BCCD);
         }
     }
@@ -405,12 +563,13 @@ ul{
     overflow-y: auto;
     transition: all .8s ease 0s;
     z-index: 10;
+
     &.open {
         opacity: 1;
         visibility: visible;
     }
 
-    &__inner-form{
+    &__inner-form {
         max-width: 500px;
         background: #fff;
         position: relative;
@@ -444,22 +603,27 @@ ul{
     &__close::before {
         transform: rotate(-45deg);
     }
-    &__body{
+
+    &__body {
         text-align: center;
         font-size: 12px;
     }
-    &__title{
+
+    &__title {
         font-family: 'Ysabeau SC Bold';
         font-size: 36px;
         margin-bottom: 20px;
     }
-    &__text{
+
+    &__text {
         margin-bottom: 20px;
     }
-    &__form{
+
+    &__form {
         margin-bottom: 35px;
     }
-    &__form-input{
+
+    &__form-input {
         display: block;
         width: 100%;
         border: 1px solid #40BCCD;
@@ -470,12 +634,14 @@ ul{
         margin-bottom: 10px;
         color: #000;
     }
-    &__form-input[placholder]{
+
+    &__form-input[placholder] {
         font-family: inherit;
         color: #000;
         font-size: 12px;
     }
-    &__form-textarea{
+
+    &__form-textarea {
         resize: none;
         width: 100%;
         height: 100px;
@@ -487,12 +653,14 @@ ul{
         color: #000;
         margin-bottom: 20px;
     }
-    &__form-textarea[placeholder]{
+
+    &__form-textarea[placeholder] {
         font-family: inherit;
         font-size: 12px;
         color: #000;
     }
-    &__form-btn{
+
+    &__form-btn {
         display: block;
         width: 100%;
         padding: 20px 10px;
@@ -504,20 +672,23 @@ ul{
         cursor: pointer;
         transition: all .3s;
     }
-    &__privacy{
+
+    &__privacy {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        &-input{
+
+        &-input {
             margin-right: 10px;
         }
-        &-text{
+
+        &-text {
             text-align: left;
         }
     }
 }
 
-.scroll__item{
+.scroll__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -529,20 +700,24 @@ ul{
     right: 0;
     bottom: 0;
     visibility: hidden;
+
     // background: rgba(54, 54, 54, 0.3);
-    &._active{
+    &._active {
         visibility: visible;
     }
-    &-inner{
+
+    &-inner {
         max-width: 585px;
         text-align: center;
         background-color: #fff;
         padding-bottom: 40px;
         color: #000;
-        img{
+
+        img {
             width: 100%;
         }
     }
+
     &-close {
         width: 20px;
         height: 20px;
@@ -570,23 +745,26 @@ ul{
     &-close::before {
         transform: rotate(-45deg);
     }
-    &-title{
+
+    &-title {
         font-family: 'Ysabeau SC Bold';
         font-size: 36px;
         margin-bottom: 20px;
     }
-    &-text{
+
+    &-text {
         margin-bottom: 20px;
     }
 }
 
-._anim-show{
+._anim-show {
     // transform: translate(0, 120%);
     opacity: 0;
     transition: all .3s ease 0s;
 }
+
 ._anim-show._active,
-._active ._anim-show{
+._active ._anim-show {
     opacity: 1;
     transform: translate(0, 0);
 }

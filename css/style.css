@@ -102,13 +102,82 @@ ul {
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  top: 30px;
   transition: all 0.3s;
   z-index: 3;
-  padding-top: 15px;
+  background-color: #fff;
+  width: 500px;
+  border-radius: 16px;
+  border: 1px solid var(--green, #40BCCD);
 }
 .header__calendar._active {
   opacity: 1;
   visibility: visible;
+}
+.header__calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px 10px;
+  font-family: "Ysabeau SC Bold";
+}
+.header__calendar-header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.header__calendar-header .icons span:hover {
+  color: #40BCCD;
+}
+.header__calendar-header .icons span:last-child {
+  margin-right: -10px;
+}
+.header .calendar {
+  padding: 20px;
+}
+.header .calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.header .calendar .days {
+  margin-bottom: 20px;
+}
+.header .calendar .weeks li {
+  font-weight: 500;
+}
+.header .calendar ul li {
+  position: relative;
+  width: 14.2857142857%;
+}
+.header .calendar .days li {
+  z-index: 1;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.header .days li.inactive {
+  color: #aaa;
+}
+.header .days li.active {
+  color: #fff;
+}
+.header .calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+.header .days li.active::before {
+  background: var(--green, #40BCCD);
 }
 .header__logo {
   margin-right: auto;
