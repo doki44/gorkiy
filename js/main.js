@@ -14,6 +14,14 @@ $('.top__slider').slick({
     arrows: true,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+        {
+            breakpoint: 1150,
+            settings: {
+                arrows: false,
+            }
+        }
+    ]
 });
 
 // Поп-ап
@@ -218,4 +226,12 @@ prevNextIcon.forEach(icon => {
         }
         renderCalendar();
     });
+});
+
+
+// Burger
+
+$('.header__burger').on("click", function(){
+    $('.header__burger, .header__mobile').toggleClass('active'); 
+    $(body).toggleClass('lock, shadow');
 });

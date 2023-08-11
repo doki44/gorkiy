@@ -53,6 +53,12 @@ ul {
     transition: all .3s;
 }
 
+.btn__mobile{
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
 .header {
     padding: 40px 0 50px;
 
@@ -190,6 +196,10 @@ ul {
         margin-right: auto;
     }
 
+    &__logo-mobile{
+        display: none;
+    }
+
     &__bottom {
         display: flex;
         align-items: center;
@@ -228,10 +238,26 @@ ul {
             margin-right: 0;
         }
     }
+
+    &__settings-mobile{
+        display: none;
+    }
+
+    &__burger{
+        display: none;
+    }
+
+    &__mobile{
+        display: none;
+    }
 }
 
 .top {
     position: relative;
+
+    &__inner-mobile{
+        display: none;
+    }
 
     &__slider .slick-arrow {
         position: absolute;
@@ -257,6 +283,10 @@ ul {
     &__slider .slick-prev {
         margin-right: 180px;
         background-image: url(../images/arrow-prev.svg);
+    }
+
+    &__slider-item img{
+        width: 100%;
     }
 
     &__inner {
@@ -298,10 +328,12 @@ ul {
 
         &-filials {
             margin-right: 60px;
+            max-width: 300px;
         }
 
         &-descr {
             display: grid;
+            // grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
             grid-template-columns: repeat(2, 1fr);
             gap: 100px 20px;
         }
@@ -314,6 +346,7 @@ ul {
 
         &-img {
             margin-bottom: 20px;
+            width: 100%;
         }
 
         &-p {
@@ -402,6 +435,8 @@ ul {
     &__list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
 
         &-item {
             max-width: 340px;
@@ -473,6 +508,9 @@ ul {
 
     &__partners {
         padding-top: 150px;
+        img{
+            width: 100%;
+        }
     }
 }
 
@@ -484,12 +522,17 @@ ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__title {
         color: #fff;
         font-family: 'Ysabeau SC Bold';
         font-size: 36px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     &__btn {
@@ -514,10 +557,12 @@ ul {
         margin-bottom: 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid #fff;
-
+        flex-wrap: wrap;
+        justify-content: center;
         &-item {
             max-width: 270px;
             margin-right: 10px;
+            margin-bottom: 20px;
         }
 
         &-item:last-child {
@@ -538,6 +583,11 @@ ul {
     &__copy {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        &-text{
+            margin-right: 10px;
+        }
 
         &-text a {
             color: var(--green, #40BCCD);

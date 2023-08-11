@@ -23,6 +23,20 @@
                         <a href="#" class="header__logo">
                             <img src="images/logo.png" alt="logo">
                         </a>
+                        <a href="#" class="header__logo-mobile">
+                            <img src="images/logo-mobile.png" alt="logo">
+                        </a>
+                        <div class="header__settings-mobile">
+                            <button>
+                                <img src="images/glass-mobile.svg" alt="">
+                            </button>
+                            <button>
+                                <img src="images/search-mobile.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
                         <ul class="header__top-nav">
                             <li class="header__top-li">
                                 <a href="#" class="header__top-link">Подкасты</a>
@@ -92,18 +106,99 @@
                         <div class="header__settings">
                             <button>Eng</button>
                             <button>
-                                <img src="images/search.svg" alt="">
+                                <img src="images/search.svg" alt="#">
                             </button>
                             <button>
-                                <img src="images/glass.svg" alt="">
+                                <img src="images/glass.svg" alt="#">
                             </button>
                         </div>
+                    </div> 
+
+                    <div class="header__mobile">
+                        <nav class="header__menu-mobile">
+                            <ul class="header__menu-list">
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">О музее</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">События</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Выставки</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Посетителям</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Экскурсии</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#popup__feedback" class="header__menu-link popup__link">Обратная связь</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">коллекция</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="header__top-nav-mobile">
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Подкасты</a>
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Музейная лавка</a>
+                            </li>
+                            <li class="header__top-li header__calendar-link">
+                                <a href="#" class="header__top-link">Календарь событий</a>
+                                <!-- <div class="header__calendar">
+                                    
+                                    <header class="header__calendar-header">
+                                        <p class="current-date"></p>
+                                        <div class="icons">
+                                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                        </div>
+                                    </header>
+                                    
+                                    <div class="calendar">
+                                        <ul class="weeks">
+                                            <li>Пн</li>
+                                            <li>Вт</li>
+                                            <li>Ср</li>
+                                            <li>Чт</li>
+                                            <li>Пт</li>
+                                            <li>Сб</li>
+                                            <li>Вс</li>
+                                        </ul>
+                                        <ul class="days"></ul>
+                                    </div>
+
+                                </div> -->
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Режим работы</a>
+                            </li>
+                        </ul>
+
+                        <div class="header__mobile-lang">
+                            <button>Ru</button>
+                            <button>Eng</button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </header>
 
         <section class="top ">
+            <div class="container">
+                <div class="top__inner-mobile">
+                    <h1 class="top__title-mobile">Литературный музей </h1>
+                    <div class="top__mobile-flex">
+                        <p class="top__place-mobile">ул. Минина, 26</p>
+                        <a href="#" class="btn">ПОДРОБНЕЕ</a>
+                    </div>
+                </div>
+            </div>
             <div class="top__slider">
                 <div class="top__slider-item">
                     <img src="images/top-slider.png" alt="slider-img">
@@ -121,6 +216,7 @@
                     <p class="top__place">ул. Минина, 26</p>
                     <a href="#" class="btn">ПОДРОБНЕЕ</a>
                 </div>
+                <a href="#" class="btn btn__mobile">купить билет</a>
             </div>
         </section>
 
@@ -424,7 +520,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <footer class="footer lock-padding">
             <div class="container">
                 <div class="footer__inner">
@@ -511,7 +607,6 @@
                 <div class="scroll__item-show _anim-show">
                     <div class="container">
                         <div class="scroll__item-inner">
-                            <!-- <a class="scroll__item-close" href="#"></a> -->
                             <img src="images/gosuslugi.png" alt="gosuslugi">
                             <p class="scroll__item-title">Расскажите, как музей может стать лучше?</p>
                             <p class="scroll__item-text">Ждём ваших предложений</p>
@@ -528,7 +623,6 @@
     <div class="popup" id="popup__feedback">
         <div class="container">
             <div class="popup__inner popup__inner-form">
-                <!-- <a class="popup__close" href="#"></a> -->
                 <div class="popup__body">
                     <p class="popup__title">Свяжитесь с нами</p>
                     <p class="popup__text">Заполните форму обратной связи и мы перезвоним вам в ближайшее время</p>
@@ -547,7 +641,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 
 
 

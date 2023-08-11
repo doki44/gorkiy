@@ -75,6 +75,12 @@ ul {
   transition: all 0.3s;
 }
 
+.btn__mobile {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
 .header {
   padding: 40px 0 50px;
 }
@@ -182,6 +188,9 @@ ul {
 .header__logo {
   margin-right: auto;
 }
+.header__logo-mobile {
+  display: none;
+}
 .header__bottom {
   display: flex;
   align-items: center;
@@ -215,9 +224,21 @@ ul {
 .header__settings button:last-child {
   margin-right: 0;
 }
+.header__settings-mobile {
+  display: none;
+}
+.header__burger {
+  display: none;
+}
+.header__mobile {
+  display: none;
+}
 
 .top {
   position: relative;
+}
+.top__inner-mobile {
+  display: none;
 }
 .top__slider .slick-arrow {
   position: absolute;
@@ -241,6 +262,9 @@ ul {
 .top__slider .slick-prev {
   margin-right: 180px;
   background-image: url(../images/arrow-prev.svg);
+}
+.top__slider-item img {
+  width: 100%;
 }
 .top__inner {
   position: absolute;
@@ -277,6 +301,7 @@ ul {
 }
 .about__flex-filials {
   margin-right: 60px;
+  max-width: 300px;
 }
 .about__flex-descr {
   display: grid;
@@ -290,6 +315,7 @@ ul {
 }
 .about__flex-img {
   margin-bottom: 20px;
+  width: 100%;
 }
 .about__flex-p {
   padding: 0 15px 15px;
@@ -354,6 +380,8 @@ ul {
 .news__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .news__list-item {
   max-width: 340px;
@@ -412,6 +440,9 @@ ul {
 .card__partners {
   padding-top: 150px;
 }
+.card__partners img {
+  width: 100%;
+}
 
 .feedback {
   background: var(--green, #40BCCD);
@@ -421,11 +452,16 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .feedback__title {
   color: #fff;
   font-family: "Ysabeau SC Bold";
   font-size: 36px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 .feedback__btn {
   background: #fff;
@@ -446,10 +482,13 @@ ul {
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #fff;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .footer__menu-item {
   max-width: 270px;
   margin-right: 10px;
+  margin-bottom: 20px;
 }
 .footer__menu-item:last-child {
   margin-right: 0;
@@ -463,6 +502,11 @@ ul {
 .footer__copy {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__copy-text {
+  margin-right: 10px;
 }
 .footer__copy-text a {
   color: var(--green, #40BCCD);
