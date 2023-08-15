@@ -107,12 +107,12 @@
         overflow-x: hidden;
     }
 
-    .shadow{
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, .45);
-        transition: all .3s;
-    }
+    // .shadow{
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0, 0, .45);
+    //     transition: all .3s;
+    // }
 
     .header__top .btn{
         display: none; 
@@ -155,15 +155,16 @@
         position: absolute;
         padding-top: 80px;
         z-index: 10;
-        top: 0;
-        right: -100%;
+        top: -100%;
+        left: 0;
+        // right: -100%;
         background-color: #fff;
         transition: all .3s;
         height: 100%;
-        width: 183px;
+        width: 100%;
     }
     .header__mobile.active{
-        right: 0;
+        top: 0;
     }
 
     .header__menu-list{
@@ -187,11 +188,9 @@
 
     .header__mobile-lang{
         text-align: center;
-        button{
+        a{
             background-color: transparent;
             color: #000;
-            border: none;
-            outline: none;
             cursor: pointer;
         }
     }
