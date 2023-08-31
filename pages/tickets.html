@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Билеты </title>
+
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/style_pages.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header class="header ">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <a href="#" class="header__logo">
+                            <img src="../images/logo.png" alt="logo">
+                        </a>
+                        <a href="#" class="header__logo-mobile">
+                            <img src="../images/logo-mobile.png" alt="logo">
+                        </a>
+                        <div class="header__settings-mobile">
+                            <a href="#">
+                                <img src="../images/glass-mobile.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../images/search-mobile.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                        <ul class="header__top-nav">
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Подкасты</a>
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Музейная лавка</a>
+                            </li>
+                            <li class="header__top-li header__calendar-link">
+                                <a href="#" class="header__top-link">Календарь событий</a>
+                                <div class="header__calendar">
+                                    
+                                    <header class="header__calendar-header">
+                                        <p class="current-date"></p>
+                                        <div class="icons">
+                                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                        </div>
+                                    </header>
+                                    
+                                    <div class="calendar">
+                                        <ul class="weeks">
+                                            <li>Пн</li>
+                                            <li>Вт</li>
+                                            <li>Ср</li>
+                                            <li>Чт</li>
+                                            <li>Пт</li>
+                                            <li>Сб</li>
+                                            <li>Вс</li>
+                                        </ul>
+                                        <ul class="days"></ul>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Режим работы</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">купить билет</a>
+                    </div>
+                    <div class="header__bottom">
+                        <nav class="header__menu">
+                            <ul class="header__menu-list">
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">О музее</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">События</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Выставки</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Посетителям</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Экскурсии</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#popup__feedback" class="header__menu-link popup__link">Обратная связь</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">коллекция</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__settings">
+                            <a href="#">Eng</a>
+                            <a href="#">
+                                <img src="../images/search.svg" alt="#">
+                            </a>
+                            <a href="#">
+                                <img src="../images/glass.svg" alt="#">
+                            </a>
+                        </div>
+                    </div> 
+
+                    <div class="header__mobile">
+                        <nav class="header__menu-mobile">
+                            <ul class="header__menu-list">
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">О музее</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">События</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Выставки</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Посетителям</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Экскурсии</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#popup__feedback" class="header__menu-link popup__link">Обратная связь</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">коллекция</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="header__top-nav-mobile">
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Подкасты</a>
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Музейная лавка</a>
+                            </li>
+                            <li class="header__top-li header__calendar-link">
+                                <a href="#" class="header__top-link">Календарь событий</a>
+                                <!-- <div class="header__calendar">
+                                    
+                                    <header class="header__calendar-header">
+                                        <p class="current-date"></p>
+                                        <div class="icons">
+                                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                        </div>
+                                    </header>
+                                    
+                                    <div class="calendar">
+                                        <ul class="weeks">
+                                            <li>Пн</li>
+                                            <li>Вт</li>
+                                            <li>Ср</li>
+                                            <li>Чт</li>
+                                            <li>Пт</li>
+                                            <li>Сб</li>
+                                            <li>Вс</li>
+                                        </ul>
+                                        <ul class="days"></ul>
+                                    </div>
+
+                                </div> -->
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Режим работы</a>
+                            </li>
+                        </ul>
+
+                        <div class="header__mobile-lang">
+                            <a href="#">Ru</a>
+                            <a href="#">Eng</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="tickets">
+            <div class="container">
+                <h1 class="_title">Билеты</h1>
+                <table class="table__tickets" border="1">
+                    <tr>
+                        <td>Наименование мастер-классов</td>
+                        <td>Возрастной ценз</td>
+                        <td>Количество человек в группе</td>
+                        <td>Время проведения</td>
+                        <td>Стоимость</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс по изготовлению книжных закладок, сувенира «Домик Каширина» в технике оригами</td>
+                        <td>5+</td>
+                        <td>до 15</td>
+                        <td>30</td>
+                        <td>50 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс по изготовлению персонажей сказок, рассказанных Акулиной Ивановной (аппликация «Домовенок» и др.</td>
+                        <td>5+</td>
+                        <td>до 15</td>
+                        <td>30</td>
+                        <td>100 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс «Хлеб от Кашириных» с дегустацией</td>
+                        <td>18+</td>
+                        <td>до 15</td>
+                        <td>до 2-х часов</td>
+                        <td>800 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс по изготовлению декоративной корзинки из картона, нитей и декоративного украшения;</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>250 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс по изготовлению авторских текстильных кукол «Берегиня» и «Крупеничка», «Желанница»</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>250 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс по сказкам Акулины Ивановны. Персонажи сказок из текстиля «Ангелочек», «Птицы» из шерстяных нитей;</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>300 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс по сказкам Акулины Ивановны. Персонажи сказок из текстиля «Домовенок»</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>300 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс по изготовлению игольниц «Тыква» и «Шляпка», шкатулки - игольницы «Грибок»</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>150 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер- класс по изготовлению «Солнечного коня» из пенькового шпагата (джута)</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>250 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер- класс по изготовлению птиц из пенькового шпагата (джута)</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>250 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер — класс по изготовлению аппликации из ткани «Воробьишко»</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>30 мин</td>
+                        <td>150 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер класс поизготовление традиционной текстильной куклы «Пеленашки» и куклы «Утешницы».</td>
+                        <td>6+</td>
+                        <td>до 15</td>
+                        <td>от 30 до 45</td>
+                        <td>150 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс «В гостях у городецкой сказки»</td>
+                        <td>10+</td>
+                        <td>от 10 до 15</td>
+                        <td>40</td>
+                        <td>150 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс «Кот из солёного теста»</td>
+                        <td>10+</td>
+                        <td>от 10 до 15</td>
+                        <td>30</td>
+                        <td>100 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс «Ожившие экспонаты»</td>
+                        <td>10+</td>
+                        <td>до 10</td>
+                        <td>30</td>
+                        <td>50 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс «Кофейная монотипия – портрет А.М.Горького»</td>
+                        <td>10+</td>
+                        <td>до 20</td>
+                        <td>30</td>
+                        <td>100 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-класс «Мир повести „Детство“ в красках». Создание эпизодов из «Детства» в монотипии</td>
+                        <td>10+</td>
+                        <td>от 10 до 15</td>
+                        <td>40</td>
+                        <td>100 руб./гр.</td>
+                    </tr>
+                    <tr>
+                        <td>Чайная церемония  «Горьковский чай»</td>
+                        <td>6+</td>
+                        <td>от 10 до 15</td>
+                        <td>30</td>
+                        <td>150 руб./гр.</td>
+                    </tr>
+                </table>
+                <p class="tickets__p">Проведение профессиональной и иной фотосессии — 5 000 ₽ <br> Экскурсия с использованием аудиогида — 200 ₽</p>
+                <p class="tickets__p">Стоимость входного билета на выставку «Писатели — детям: о детстве и о себе» в Музее детства А.М. Горького «Домик Каширина»:</p>
+                <ul class="tickets__list">
+                    <li class="tickets__list-li">— Школьники, студенты, пенсионеры — 50 ₽;</li>
+                    <li class="tickets__list-li">— Взрослые — 100 ₽</li>
+                </ul>
+ 
+            </div>
+        </section>
+
+        <section class="feedback ">
+            <div class="container">
+                <div class="feedback__inner">
+                    <p class="feedback__title">По всем вопросам и предложениям музея обращайтесь к нам</p>
+                    <a href="#" class="feedback__btn">НАПИСАТЬ</a>
+                </div>
+            </div>
+        </section>
+ 
+        <footer class="footer lock-padding">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__menu">
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Выставки</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Посетителям</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Календарь событий</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Купить билет</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">О музее</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Фотогалерея</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Новости и события</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Биография А.М. Горького</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Мероприятия</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Образовательные программы</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">Литературный музей</li>
+                                <li class="footer__menu-li">Н. Новгород, ул. Минина, 26</li>
+                                <li class="footer__menu-li">Музей открыт с 9:00 до 17:00</li>
+                                <li class="footer__menu-li">Пн., вт. — выходной день</li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">
+                                        <img src="../images/footer-tg.svg" alt="Telegram">
+                                    </a>
+                                    <a href="#" class="footer__menu-link">
+                                        <img src="../images/footer-vk.svg" alt="VKontakte">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">Музей-квартира А.М. Горького</li>
+                                <li class="footer__menu-li">Н. Новгород, ул. Семашко, 19</li>
+                                <li class="footer__menu-li">Музей открыт с 9:00 до 17:00</li>
+                                <li class="footer__menu-li">Пн., вт. — выходной день</li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">Музей детства А.М. Горького «Домик Каширина»</li>
+                                <li class="footer__menu-li">Н. Новгород, почтовый съезд, 21</li>
+                                <li class="footer__menu-li">Музей открыт с 10:00 до 17:00</li>
+                                <li class="footer__menu-li">Вт., ср. — выходной день</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__copy">
+                        <p class="footer__copy-text">©2016–2023 Государственный ордера Почёта музей А.М. Горького</p>
+                        <p class="footer__copy-text">Создание сайта — <a href="#">сайт НН</a></p>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Госуслуги анимация появления -->
+
+            <!-- <div class="scroll__item _anim-items _anim-no-hide">
+                <div class="scroll__item-show _anim-show">
+                    <div class="container">
+                        <div class="scroll__item-inner">
+                            <img src="images/gosuslugi.png" alt="gosuslugi">
+                            <p class="scroll__item-title">Расскажите, как музей может стать лучше?</p>
+                            <p class="scroll__item-text">Ждём ваших предложений</p>
+                            <button class="btn" type="submit">отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Литературный музей </title>
+
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/style_pages.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header class="header ">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <a href="#" class="header__logo">
+                            <img src="../images/logo.png" alt="logo">
+                        </a>
+                        <a href="#" class="header__logo-mobile">
+                            <img src="../images/logo-mobile.png" alt="logo">
+                        </a>
+                        <div class="header__settings-mobile">
+                            <a href="#">
+                                <img src="../images/glass-mobile.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../images/search-mobile.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                        <ul class="header__top-nav">
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Подкасты</a>
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Музейная лавка</a>
+                            </li>
+                            <li class="header__top-li header__calendar-link">
+                                <a href="#" class="header__top-link">Календарь событий</a>
+                                <div class="header__calendar">
+                                    
+                                    <header class="header__calendar-header">
+                                        <p class="current-date"></p>
+                                        <div class="icons">
+                                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                        </div>
+                                    </header>
+                                    
+                                    <div class="calendar">
+                                        <ul class="weeks">
+                                            <li>Пн</li>
+                                            <li>Вт</li>
+                                            <li>Ср</li>
+                                            <li>Чт</li>
+                                            <li>Пт</li>
+                                            <li>Сб</li>
+                                            <li>Вс</li>
+                                        </ul>
+                                        <ul class="days"></ul>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Режим работы</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">купить билет</a>
+                    </div>
+                    <div class="header__bottom">
+                        <nav class="header__menu">
+                            <ul class="header__menu-list">
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">О музее</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">События</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Выставки</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Посетителям</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Экскурсии</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#popup__feedback" class="header__menu-link popup__link">Обратная связь</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">коллекция</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__settings">
+                            <a href="#">Eng</a>
+                            <a href="#">
+                                <img src="../images/search.svg" alt="#">
+                            </a>
+                            <a href="#">
+                                <img src="../images/glass.svg" alt="#">
+                            </a>
+                        </div>
+                    </div> 
+
+                    <div class="header__mobile">
+                        <nav class="header__menu-mobile">
+                            <ul class="header__menu-list">
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">О музее</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">События</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Выставки</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Посетителям</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">Экскурсии</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#popup__feedback" class="header__menu-link popup__link">Обратная связь</a>
+                                </li>
+                                <li class="header__menu-li">
+                                    <a href="#" class="header__menu-link">коллекция</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="header__top-nav-mobile">
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Подкасты</a>
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Музейная лавка</a>
+                            </li>
+                            <li class="header__top-li header__calendar-link">
+                                <a href="#" class="header__top-link">Календарь событий</a>
+                                <!-- <div class="header__calendar">
+                                    
+                                    <header class="header__calendar-header">
+                                        <p class="current-date"></p>
+                                        <div class="icons">
+                                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                        </div>
+                                    </header>
+                                    
+                                    <div class="calendar">
+                                        <ul class="weeks">
+                                            <li>Пн</li>
+                                            <li>Вт</li>
+                                            <li>Ср</li>
+                                            <li>Чт</li>
+                                            <li>Пт</li>
+                                            <li>Сб</li>
+                                            <li>Вс</li>
+                                        </ul>
+                                        <ul class="days"></ul>
+                                    </div>
+
+                                </div> -->
+                            </li>
+                            <li class="header__top-li">
+                                <a href="#" class="header__top-link">Режим работы</a>
+                            </li>
+                        </ul>
+
+                        <div class="header__mobile-lang">
+                            <a href="#">Ru</a>
+                            <a href="#">Eng</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="museum">
+            <div class="container">
+                <h1 class="_title">Музей-квартира А.М.Горького </h1>
+                <div class="museum__images">
+                    <div class="museum__image">
+                        <img src="../images/museum1.png" alt="">
+                    </div>
+                    <div class="museum__image">
+                        <img src="../images/museum2.png" alt="">
+                    </div>
+                    <div class="museum__image">
+                        <img src="../images/museum2.png" alt="">
+                    </div>
+                </div>
+                <p class="_text">Литературный музей – главное здание объединения Муниципального бюджетного учреждения культуры « Государственный ордена Почёта музей А.М. Горького». Он располагается в бывшем купеческом доме Бурмистровых, в центральной исторической части Нижнего Новгорода.
+                    Это - один из немногих сохранившихся в Нижнем Новгороде особняков с интерьером - образец парадного дома периода эклектики второй половины XIX века - памятник истории и культуры народов Российской Федерации регионального значения. Первоначально здание представляло собой главный дом обширной купеческой усадьбы на углу Минина (Жуковской) и Провиантской улиц.
+                    В 1885 году был построен (реконструирован) главный усадебный дом; предположительно надзор за его строительством вёл городской архитектор Николай Дмитриевич Григорьев.
+                    Дом Бурмистровых «небольшой, изящный, как королевская игрушка» стал местом действия в романе И.С. Рукавишникова « Проклятый род»
+                    В 1934 году он был передан Литературному музею им. А.М.Горького, а в одном из залов, разместилась Горьковская писательская организация.
+                    Первые экспозиции Литературного музея размещали, подчёркнуто не обращая внимания на интерьеры дома, помогая настраивать посетителя на восприятие М.Горького как «пролетарского» писателя, их тщательно закрывали.
+                    Сегодня дом и его интерьеры - ценный и интересный объект показа, часть экспозиции Литературного музея, которая рассказывает о культурной и литературной жизни Нижнего Новгорода в конце ХIХ – начала ХХ века.
+                    Она посвящёна биографии, художественному творчеству М. Горького, истории связей писателя и города на разных этапах становления его творческой личности.
+                    Рядом с горьковскими представлены материалы о жизни и творчестве писателей: П.И.Мельникова (А.Печерского) и В.Г.Короленко, поэтов: Л.Граве и И.Рукавишникова, фотографов-художников: А.О.Карелина и М.П.Дмитриева, музыканта В.Ю.Виллуана.
+                    Фотографии, документы, характерные предметы материальной культуры XIX- начала XX веков воссоздают облик российского красивого и «бойкого» провинциального города, который благодаря М. Горькому как художественный образ вошёл в мировую литературу.
+                    Творческая и личная биография писателя представлена в многообразных и сложных связях с эпохой, что даёт возможность проследить все перипетии его непростой, противоречивой судьбы.
+                    Экспозиции: « А.М.Горький- художник и революция», «Публицистика и общественная деятельность А.М.Горького 1920-х-30-х гг.», « Роман А.М.Горького « Жизнь Клима Самгина», пополнялись за время работы новыми материалами, представляя жизнь и творчество писателя в разные, в том числе - переломные периоды российской истории.
+                    Располагая обширным собранием, музей активно использует его в экспозиционной и выставочной деятельности.
+                    Выставочные программы Литературного музея весьма разнообразны по темам, именам и художественному воплощению.
+                    Здесь проходят выставки, посвящённые историко-литературным датам, демонстрируются работы современных художников, коллекции других музеев.
+                    В активе музея десятки экскурсионных программ для различных категорий посетителей: от дошкольников до пенсионеров, людей «золотого возраста»; разработаны авторские программы для учащихся, включающие различные по тематике и методике проведения занятия.
+                    Литературный музей изначально создавался как научный центр и в настоящее время сохраняет статус международного центра по сохранению, изучению и представлению обществу наследия А. М. Горького, писателей - нижегородцев и деятелей русской культуры, творчески работавших в Нижнем Новгороде на рубеже XIX - ХХ веков и современных писателей.
+                    Музей- это культурное представительство Нижегородского региона, где проводятся Международные научные конференции - Горьковские чтения, симпозиумы, семинары по проблемам литературоведения и музееведения.</p>
+            </div>
+        </section>
+
+        <section class="feedback ">
+            <div class="container">
+                <div class="feedback__inner">
+                    <p class="feedback__title">По всем вопросам и предложениям музея обращайтесь к нам</p>
+                    <a href="#" class="feedback__btn">НАПИСАТЬ</a>
+                </div>
+            </div>
+        </section>
+ 
+        <footer class="footer lock-padding">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__menu">
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Выставки</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Посетителям</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Календарь событий</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Купить билет</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">О музее</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Фотогалерея</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Новости и события</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Биография А.М. Горького</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Мероприятия</a>
+                                </li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">Образовательные программы</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">Литературный музей</li>
+                                <li class="footer__menu-li">Н. Новгород, ул. Минина, 26</li>
+                                <li class="footer__menu-li">Музей открыт с 9:00 до 17:00</li>
+                                <li class="footer__menu-li">Пн., вт. — выходной день</li>
+                                <li class="footer__menu-li">
+                                    <a href="#" class="footer__menu-link">
+                                        <img src="../images/footer-tg.svg" alt="Telegram">
+                                    </a>
+                                    <a href="#" class="footer__menu-link">
+                                        <img src="../images/footer-vk.svg" alt="VKontakte">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">Музей-квартира А.М. Горького</li>
+                                <li class="footer__menu-li">Н. Новгород, ул. Семашко, 19</li>
+                                <li class="footer__menu-li">Музей открыт с 9:00 до 17:00</li>
+                                <li class="footer__menu-li">Пн., вт. — выходной день</li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu-item">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-li">Музей детства А.М. Горького «Домик Каширина»</li>
+                                <li class="footer__menu-li">Н. Новгород, почтовый съезд, 21</li>
+                                <li class="footer__menu-li">Музей открыт с 10:00 до 17:00</li>
+                                <li class="footer__menu-li">Вт., ср. — выходной день</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__copy">
+                        <p class="footer__copy-text">©2016–2023 Государственный ордера Почёта музей А.М. Горького</p>
+                        <p class="footer__copy-text">Создание сайта — <a href="#">сайт НН</a></p>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Госуслуги анимация появления -->
+
+            <!-- <div class="scroll__item _anim-items _anim-no-hide">
+                <div class="scroll__item-show _anim-show">
+                    <div class="container">
+                        <div class="scroll__item-inner">
+                            <img src="images/gosuslugi.png" alt="gosuslugi">
+                            <p class="scroll__item-title">Расскажите, как музей может стать лучше?</p>
+                            <p class="scroll__item-text">Ждём ваших предложений</p>
+                            <button class="btn" type="submit">отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

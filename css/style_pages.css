@@ -1,0 +1,408 @@
+@font-face {
+  font-family: "Century Gothic Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/centurygothic.woff") format("woff"), url("../fonts/centurygothic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Century Gothic Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/centurygothic_bold.woff") format("woff"), url("../fonts/centurygothic_bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ysabeau SC Semi-Bold";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/YsabeauSC-SemiBold.woff") format("woff"), url("../fonts/YsabeauSC-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ysabeau SC Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/YsabeauSC-Bold.woff") format("woff"), url("../fonts/YsabeauSC-Bold.woff2") format("woff2");
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic Regular";
+  font-size: 20px;
+  color: #000;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.lock {
+  overflow-y: hidden;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  font-family: "Century Gothic Bold";
+  background: var(--green, #40BCCD);
+  border: 2px solid transparent;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  max-height: 65px;
+  transition: all 0.3s;
+}
+
+.btn__mobile {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.header {
+  padding: 40px 0 50px;
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.header__top-nav {
+  margin-right: 40px;
+}
+.header__top-li {
+  display: inline-block;
+  margin-right: 20px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+.header__top-li:last-child {
+  margin-right: 0;
+}
+.header__calendar-link {
+  position: relative;
+}
+.header__calendar {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 30px;
+  transition: all 0.3s;
+  z-index: 3;
+  background-color: #fff;
+  width: 500px;
+  border-radius: 16px;
+  border: 1px solid var(--green, #40BCCD);
+}
+.header__calendar._active {
+  opacity: 1;
+  visibility: visible;
+}
+.header__calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px 10px;
+  font-family: "Ysabeau SC Bold";
+}
+.header__calendar-header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.header__calendar-header .icons span:hover {
+  color: #40BCCD;
+}
+.header__calendar-header .icons span:last-child {
+  margin-right: -10px;
+}
+.header .calendar {
+  padding: 20px;
+}
+.header .calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.header .calendar .days {
+  margin-bottom: 20px;
+}
+.header .calendar .weeks li {
+  font-weight: 500;
+}
+.header .calendar ul li {
+  position: relative;
+  width: 14.2857142857%;
+}
+.header .calendar .days li {
+  z-index: 1;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.header .days li.inactive {
+  color: #aaa;
+}
+.header .days li.active {
+  color: #fff;
+}
+.header .calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+.header .days li.active::before {
+  background: var(--green, #40BCCD);
+}
+.header__logo-mobile {
+  display: none;
+}
+.header__bottom {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+.header__menu {
+  font-size: 21px;
+  font-family: "Century Gothic Bold";
+  margin-right: auto;
+}
+.header__menu-li {
+  display: inline-block;
+  padding: 15px 23px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+.header__settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__settings a {
+  font-size: 24px;
+  display: flex;
+  background-color: transparent;
+  margin-right: 7px;
+}
+.header__settings a:last-child {
+  margin-right: 0;
+}
+.header__settings-mobile {
+  display: none;
+}
+.header__burger {
+  display: none;
+}
+.header__mobile {
+  display: none;
+}
+
+._title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: "Ysabeau SC Bold";
+}
+
+._text {
+  font-size: 20px;
+  color: #000;
+  font-family: "Century Gothic Regular";
+}
+
+.feedback {
+  background: var(--green, #40BCCD);
+  padding: 50px 0;
+}
+.feedback__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.feedback__title {
+  color: #fff;
+  font-family: "Ysabeau SC Bold";
+  font-size: 36px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.feedback__btn {
+  background: #fff;
+  color: #000;
+  font-family: "Century Gothic Bold";
+  padding: 20px 40px;
+}
+
+.footer {
+  padding: 150px 0 70px;
+  background: #262626;
+  color: #fff;
+  position: relative;
+}
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__menu-item {
+  max-width: 270px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.footer__menu-item:last-child {
+  margin-right: 0;
+}
+.footer__menu-li {
+  margin-bottom: 10px;
+}
+.footer__menu-li:last-child {
+  margin-bottom: 0;
+}
+.footer__copy {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__copy-text {
+  margin-right: 10px;
+}
+.footer__copy-text a {
+  color: var(--green, #40BCCD);
+}
+
+.filials {
+  margin-bottom: 160px;
+}
+.filials__items {
+  display: flex;
+}
+.filials__item {
+  margin-right: 20px;
+}
+.filials__item *:last-child {
+  margin-right: 0;
+}
+.filials__item-img {
+  margin-bottom: 20px;
+}
+.filials__item-descr {
+  background: #F7F7F7;
+  padding: 28px 10px;
+}
+.filials__item-title {
+  font-family: "Ysabeau SC Semi-Bold";
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.filials__item-time {
+  display: inline-block;
+  background: #40BCCD;
+  color: #fff;
+  font-family: "Century Gothic Regular";
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 500px;
+}
+.filials__item-place {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 28px;
+}
+.filials__item-place::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../images/place-filials.svg);
+  width: 25px;
+  height: 25px;
+}
+.filials__item-link {
+  text-transform: uppercase;
+  color: #40BCCD;
+  font-family: "Century Gothic Regular";
+  font-size: 20px;
+}
+
+.room {
+  margin-bottom: 100px;
+}
+.room__images {
+  display: flex;
+  margin-bottom: 30px;
+}
+.room__image {
+  margin-right: 20px;
+}
+.room__image:last-child {
+  margin-right: 0;
+}
+
+.museum {
+  margin-bottom: 100px;
+}
+.museum__images {
+  display: flex;
+  margin-bottom: 30px;
+}
+.museum__image {
+  margin-right: 20px;
+}
+.museum__image:last-child {
+  margin-right: 0;
+}
+
+.museum-child {
+  margin-bottom: 100px;
+}
+.museum-child__images {
+  display: flex;
+  margin-bottom: 30px;
+}
+.museum-child__image {
+  margin-right: 20px;
+}
+.museum-child__image:last-child {
+  margin-right: 0;
+}
